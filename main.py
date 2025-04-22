@@ -302,35 +302,35 @@ def main():
                 with st.chat_message("assistant"):
                     st.markdown(response.text)
     # Image captioning page
-    elif selected == "Image Analysis":
+    # elif selected == "Image Analysis":
 
-        st.title("📷 Image Analysis")
+    #     st.title("📷 Image Analysis")
 
-        uploaded_image = st.file_uploader(
-            "Upload Image", type=["jpg", "jpeg", "png"])
+    #     uploaded_image = st.file_uploader(
+    #         "Upload Image", type=["jpg", "jpeg", "png"])
 
-        if st.button("Analyze Image"):
-            image = Image.open(uploaded_image)
+    #     if st.button("Analyze Image"):
+    #         image = Image.open(uploaded_image)
 
-            col1, col2 = st.columns(2)
+    #         col1, col2 = st.columns(2)
 
-            with col1:
-                resized_img = image.resize((800, 500))
-                st.image(resized_img)
+    #         with col1:
+    #             resized_img = image.resize((800, 500))
+    #             st.image(resized_img)
 
-            default_prompt = "Describe the image in Vietnamese"
-            # get the caption of the image from the gemini-pro-vision LLM
-            caption = gemini_pro_vision_response(default_prompt, image)
+    #         default_prompt = "Describe the image in Vietnamese"
+    #         # get the caption of the image from the gemini-pro-vision LLM
+    #         caption = gemini_pro_vision_response(default_prompt, image)
 
-            with col2:
-                st.info(caption)
+    #         with col2:
+    #             st.info(caption)
 
-    elif selected == "Math Solver":
+    # elif selected == "Math Solver":
 
-        upload_image = None
-        # upload image
-        upload_image = st.sidebar.file_uploader(
-            'Upload image', type=["jpg", "png", "jpeg"])
+    #     upload_image = None
+    #     # upload image
+    #     upload_image = st.sidebar.file_uploader(
+    #         'Upload image', type=["jpg", "png", "jpeg"])
 
         if selected != st.session_state.get('previous_model', None):
             clear_history()
