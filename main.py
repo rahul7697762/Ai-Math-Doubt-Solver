@@ -325,15 +325,15 @@ def main():
     #         with col2:
     #             st.info(caption)
 
-    elif selected == "Math Solver":
+    # elif selected == "Math Solver":
 
-        upload_image = None
-        # upload image
-        upload_image = st.sidebar.file_uploader(
-            'Upload image', type=["jpg", "png", "jpeg"])
+    #     upload_image = None
+    #     # upload image
+    #     upload_image = st.sidebar.file_uploader(
+    #         'Upload image', type=["jpg", "png", "jpeg"])
 
-        if selected != st.session_state.get('previous_model', None):
-            clear_history()
+    #     if selected != st.session_state.get('previous_model', None):
+    #         clear_history()
             st.session_state['previous_model'] = selected
         st.title("🧮 Math Solver")
 
