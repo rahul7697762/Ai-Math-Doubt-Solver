@@ -35,7 +35,7 @@ if not GOOGLE_API_KEY:
     st.stop()
 
 # Configure the Gemini API
-genai.configure(api_key=AIzaSyC2WArCsMXjjKxHfr0RGva386tzoGU1At8)
+genai.configure(api_key=GOOGLE_API_KEY)
 
 # Define model configurations
 GEMINI_PRO_MODEL = "gemini-1.5-pro"
