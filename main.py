@@ -91,7 +91,7 @@ def handle_api_error(e):
     else:
         st.error(f"""
         An unexpected error occurred: {str(e)}
-        Please try again or contact support if the issue persists.
+        Please try again or contact support if the issue persist.
         """)
         return False
 
